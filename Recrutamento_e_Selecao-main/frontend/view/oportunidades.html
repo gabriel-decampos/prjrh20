@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonte.googleapis.com/css2?family=Roboto:wght@400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/oportunidades.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <title>Oportunidades</title>
+</head>
+
+<body>
+  <header class="header-area">
+    <div class="header-container">
+      <div class="logo">
+        <a href="#"><img src="../images/logo.png" alt="logo"></a>
+      </div>
+      <div class="mobile-nav">
+        <label for="menuTrigger" class="nav-ico"><i class="fa fa-bars"></i></label>
+        <input type="checkbox" id="menuTrigger">
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="../view/minhasVagas.html" class="">Minhas Vagas</a></li>
+            <li><a href="../view/oportunidades.html" class="active">Oportunidades</a></li>
+            <li><a href="" class="">Gerenciar Perfil</a>
+              <i class="fa fa-caret-down"></i>
+              <ul>
+                <li><a href="../view/gerenciarPerfil.html">Editar Perfil</a></li>
+                <li><a href="../view/curriculo.html">Editar Currículo</a></li>
+
+              </ul>
+            </li>
+            <li><a href="../view/contato.html" class="">Contato</a></li>
+            <li><a href="../view/login.html" class="">Sair</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="titulo" alt="titulo">
+    <h1>Oportunidades</h1>
+    <p>Encontre outras oportunidades de vaga</p>
+  </div>
+
+  <form id="form-filtro">
+    <label class="tipoVaga" for="filtroTipoVaga"> Filtrar por tipo de vaga </label>
+    <select name="filtroTipoVaga" id="filtroTipoVaga">
+      <option value="">Tipo de Vagas</option>
+      <option value="Efetivo">Efetivo</option>
+      <option value="Estágio">Estágio</option>
+      <option value="Temporário">Temporário</option>
+      <option value="Trainee">Trainee</option>
+    </select>
+    <label id="localVaga" for="filtroLocalVaga"> Filtrar por local </label>
+    <select name="filtroLocalVaga" id="filtroLocalVaga">
+      <option value="">Local da Vaga</option>
+      <option value="Acre">Acre</option>
+      <option value="Alagoas">Alagoas</option>
+      <option value="Amapá">Amapá</option>
+      <option value="Amazonas">Amazonas</option>
+      <option value="Bahia">Bahia</option>
+      <option value="Ceará">Ceará</option>
+      <option value="Espírito Santo">Espírito Santo</option>
+      <option value="Goiás">Goiás</option>
+      <option value="Maranhão">Maranhão</option>
+      <option value="Mato Grosso">Mato Grosso</option>
+      <option value="Minas Gerais">Minas Gerais</option>
+      <option value="Pará">Pará</option>
+      <option value="Paraíba">Paraíba</option>
+      <option value="Paraná">Paraná</option>
+      <option value="Pernambuco">Pernambuco</option>
+      <option value="Piauí">Piauí</option>
+      <option value="Rio de Janeiro">Rio de Janeiro</option>
+      <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+      <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+      <option value="Rondônia">Rondônia</option>
+      <option value="Roraima">Roraima</option>
+      <option value="Santa Catarina">Santa Catarina</option>
+      <option value="São Paulo">São Paulo</option>
+      <option value="Sergipe">Sergipe</option>
+      <option value="Tocantins">Tocantins</option>
+      <option value="Distrito Federal">Distrito Federal</option>
+    </select>
+    <label id="LocalVaga" for="filtroDeptoVaga"> Filtrar por Departamento </label>
+    <select name="filtroDeptoVaga" id="filtroDeptoVaga">
+      <option value ="">Departamento</option>
+      <option value="Administrativo">Administrativo</option>
+      <option value="Comercial">Comercial</option>
+      <option value="Compras">Compras</option>
+      <option value="Comunicação">Comunicação</option>
+      <option value="Contábil">Contábil</option>
+      <option value="Financeiro">Financeiro</option> 
+      <option value="Jurídico">Jurídico</option>
+      <option value="Logístico">Logístico</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Operacional/Produção">Operacional/Produção</option>
+      <option value="Recursos Humanos">Recursos Humanos</option>
+      <option value="Segurança">Segurança</option>
+      <option value="Tecnologias da Informação">Tecnologias da Informação</option>
+      <option value="Vendas">Vendas</option>
+    </select>
+    <a href="#" id="filtrar"><i class="fa fa-search"></i></a>
+  </form>
+
+  <div class="container oportunidadesContainer" id="oportunidadesContainer"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../controllers/OportunidadesController.js" type="module"></script>
+</body>
+
+</html>

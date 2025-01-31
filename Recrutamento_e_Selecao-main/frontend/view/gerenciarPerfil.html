@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/gerenciarPerfil.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link href="https://fonte.googleapis.com/css2?family=Roboto:wght@400,500,700&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Gerenciar Perfil</title>
+</head>
+<body>
+    <header class="header-area">
+        <div class="header-container">
+          <div class="logo">
+            <a href="#"><img src="../images/logo.png" alt="logo"></a>
+          </div>
+          <div class="mobile-nav">
+            <label for="menuTrigger" class="nav-ico"><i class="fa fa-bars"></i></label>
+            <input type="checkbox" id="menuTrigger">
+           <nav class="nav-menu">
+            <ul>
+                <li><a href="../view/minhasVagas.html" class="">Minhas Vagas</a></li>
+                <li><a href="../view/oportunidades.html" class="">Oportunidades</a></li>
+                <li><a href="" class="active">Gerenciar Perfil</a>
+                    <i class="fa fa-caret-down"></i>
+                    <ul>
+                        <li><a href="../view/gerenciarPerfil.html">Editar Perfil</a></li>
+                        <li><a href="../view/curriculo.html">Editar Currículo</a></li>
+                     
+                    </ul>   
+                   </li>
+                <li><a href="../view/contato.html" class="">Contato</a></li>
+               <li><a href="../view/login.html" class="">Sair</a></li>
+            </ul>
+          </nav>
+         </div>
+        </div>
+      </header> 
+
+  <div class="container">
+    
+    <div class="form">
+        <form action="#" id="formPerfil">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Editar Perfil</h1>
+                </div>
+            </div>
+                <h2>Dados Pessoais</h2>
+            <div class="input-group">
+                <div class="input-box">
+                    <label id="labelNome" for="nome">Nome Completo</label>
+                    <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui" data-tipo="nome" required>
+                </div>
+
+                <div class="input-box">
+                    <label id="labeldataNasc" for="dataNasc">Data de Nascimento</label>
+
+                    <input id="dataNascimento" type="date" name="dataNascimento"  required>
+                </div>
+                <div class="input-box">
+                    <label id="labelEmail" for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Informe seu e-mail" data-tipo="email" required>
+                </div>
+                <div class="input-box">
+                    <label id="labelCPF" for="cpf">CPF </label>
+                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" data-tipo="cpf" required> 
+                </div>     
+                <div class="input-box">
+                    <label id="labelCelular" for="celular">Celular </label>
+                    <input type="text" name="celular" id="celular" placeholder="(__)_____-____" data-tipo="celular" required>
+                </div>
+                <div class="input-box">
+                    <label id="labelarea" for="area">Área de interesse </label>
+                    <select name="area" id="area">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="todas">Todas</option>
+                        <option value="TI">TI</option>
+                        <option value="administrativo">Administrativo</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="humano">Humano</option>
+                        <option value="juridico">Jurídico</option>
+                        <option value="producao">Produção</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label id="labelgenero" for="genero">Gênero </label>
+                    <select name="genero" id="genero">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Outro">Outro</option>
+                        <option value="Prefiro não dizer">Prefiro não dizer</option>
+                 </select>
+                </div>
+                <div class="input-box">
+                    <label id="labelCEP" for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" maxlength="8">
+                </div>
+                <div class="input-box">
+                    <label id="labelLogradouro" for="logradouro">Logradouro</label>
+                    <input type="text" name="logradouro" id="logradouro">
+                </div>
+                <div class="input-box">
+                    <label id="labelBairro" for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro">
+                </div>
+                <div class="input-box">
+                    <label id="labelCidade" for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div class="input-box">
+                    <label id="labelEstado" for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado">
+                </div>
+               
+                <div class="input-box">
+                    <label id="labelPais" for="país">País de Origem </label>
+                    <select name="pais" id="pais">
+                        <option value="Brasil">Brasil</option>
+                    </select>
+                </div>
+            </div>
+
+           
+
+            <div class="input-senha">
+                <h2>Alterar Senha</h2>
+                <div class="input-box">
+                        <label id="labelSenha" for="password"> Senha Atual</label>
+                        <input id="senha" type="senha" name="senha" data-tipo="senhaAtual" placeholder="Digite sua senha atual" >
+                    </div>
+                    <div class="input-box">
+                        <label id="labelSenhaNova" for="newPassword">Senha Nova</label>
+                        <input id="newPassword" type="password" name="newPassword" placeholder="Digite sua senha nova" data-tipo="senhaNova">
+                    </div>
+            </div>
+            <div class="salvar-button" id="salvarTudo">
+                <button><a href="#">Salvar</a> </button>
+            </div>
+            <div class="excluir-button" id="excluir">
+                <button><a href="#">Excluir conta</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="../model/Candidato.js"></script>
+<script src="../app.js" type="module"></script> 
+<script src="../utils/Utils.js"></script>
+<script src="../controllers/GerenciarPerfilController.js" type="module"></script>    
+</body>
+</html>
